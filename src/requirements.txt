@@ -1,0 +1,7 @@
+rich
+tqdm
+pyinstaller
+m3u8
+plyer
+ttkbootstrap
+requests
