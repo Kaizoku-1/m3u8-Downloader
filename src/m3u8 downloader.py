@@ -124,7 +124,7 @@ def download_stream(url, output_path):
 
 def main():
     """Main function to run the downloader."""
-    console.print(Panel.fit("[bold cyan]M3U8 Downloader[/bold cyan]\nby @bespider", title="Welcome"))
+    console.print(Panel.fit("[bold cyan]M3U8 Downloader[/bold cyan]\nby @the_happiest_iranian", title="Welcome"))
     check_for_ffmpeg()
 
     try:
