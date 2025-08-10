@@ -14,8 +14,8 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-echo [2/3] Installing dependencies from src/requirements.txt...
-pip install -r src/requirements.txt
+echo [2/3] Installing dependencies...
+pip install -r "%~dp0src\requirements.txt"
 if %errorlevel% neq 0 (
     echo Error: Failed to install dependencies.
     pause
@@ -24,7 +24,7 @@ if %errorlevel% neq 0 (
 
 echo.
 echo [3/3] Running PyInstaller to build the .exe...
-pyinstaller --noconfirm --onefile --windowed --name M3U8_Downloader_Pro --icon="NONE" src/main_gui.py
+pyinstaller --noconfirm --onefile --windowed --name M3U8_Downloader_Pro --icon="NONE" "%~dp0src\main_gui.py"
 if %errorlevel% neq 0 (
     echo Error: PyInstaller failed to build the executable.
     pause
@@ -36,6 +36,6 @@ echo ===================================
 echo  Build successful!
 echo ===================================
 echo The executable can be found in the 'dist' folder:
-echo dist/M3U8_Downloader_Pro.exe
+echo %~dp0dist\M3U8_Downloader_Pro.exe
 echo.
 pause
