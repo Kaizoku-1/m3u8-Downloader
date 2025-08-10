@@ -2,7 +2,7 @@
 ## About
 
 This tool helps you download m3u8 links using ffmpeg.
-
+Install the requirements for requirements.txt
 ## How to Use
 
 1. Download and run the Python script.
